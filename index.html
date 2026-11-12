@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUY NOW: The Ace — Publishing Availability</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000;
+    --panel: #0a0a0a;
+    --line: #1e1e1e;
+    --ink: #fff;
+    --muted: #8a8a8a;
+    --accent: #fff;
+    --pill: #151515;
+    --na: #4a4a4a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0 0 20px;
+  }
+
+  caption .kicker {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  caption .title {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  caption .subtitle {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  thead th {
+    background: #050505;
+    color: var(--ink);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 16px 18px;
+    font-weight: 300;
+    border-bottom: 1px solid var(--line);
+  }
+
+  thead th.center { text-align: center; }
+  thead th.btn-col { text-align: center; width: 150px; }
+
+  tbody td {
+    padding: 14px 18px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  tbody td.region {
+    font-weight: 300;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  tbody td.region .code {
+    color: var(--muted);
+    font-size: 12px;
+    margin-right: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  tbody td.center {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  tbody td.center .check {
+    color: var(--ink);
+    font-size: 16px;
+  }
+
+  tbody td.center .na {
+    color: var(--na);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  tbody td.btn-cell {
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--ink);
+    padding: 7px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .btn:hover {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .btn.na {
+    border-color: var(--line);
+    color: var(--na);
+    pointer-events: none;
+  }
+
+  tbody tr:hover {
+    background: #0f0f0f;
+  }
+
+  tfoot td {
+    padding: 16px 18px;
+    border-top: 1px solid var(--ink);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: left;
+    letter-spacing: 0.04em;
+  }
+
+  .note {
+    margin: 16px 0 0;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .note code {
+    background: var(--pill);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: var(--ink);
+  }
+
+  @media (max-width: 640px) {
+    caption .title { font-size: 18px; }
+    thead th, tbody td { padding: 10px 8px; }
+    tbody td.region .code { display: none; }
+    tbody td.region { font-size: 12px; }
+    thead th.btn-col { width: 90px; }
+    .btn { font-size: 10px; padding: 5px 8px; }
+    tbody td.center { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <table>
+    <caption>
+      <span class="kicker">Buy Now</span>
+      <span class="title">The Ace — from the world of Sad Lucifer</span>
+      <span class="subtitle">Publishing availability by region · formats: e-book, paperback, hardcover</span>
+    </caption>
+
+    <thead>
+      <tr>
+        <th scope="col">Region</th>
+        <th scope="col" class="center">E-Book</th>
+        <th scope="col" class="center">Paperback</th>
+        <th scope="col" class="center">Hardcover</th>
+        <th scope="col" class="btn-col">Buy</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- US -->
+      <tr>
+        <td class="region"><span class="code">US</span>United States</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.com/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- UK -->
+      <tr>
+        <td class="region"><span class="code">UK</span>United Kingdom</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.co.uk/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- DE -->
+      <tr>
+        <td class="region"><span class="code">DE</span>Germany</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.de/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- FR -->
+      <tr>
+        <td class="region"><span class="code">FR</span>France</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.fr/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- ES -->
+      <tr>
+        <td class="region"><span class="code">ES</span>Spain</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.es/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- IT -->
+      <tr>
+        <td class="region"><span class="code">IT</span>Italy</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.it/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- NL -->
+      <tr>
+        <td class="region"><span class="code">NL</span>Netherlands</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.nl/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- JP -->
+      <tr>
+        <td class="region"><span class="code">JP</span>Japan</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.co.jp/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- BR -->
+      <tr>
+        <td class="region"><span class="code">BR</span>Brazil</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.com.br/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- CA -->
+      <tr>
+        <td class="region"><span class="code">CA</span>Canada</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.ca/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- MX -->
+      <tr>
+        <td class="region"><span class="code">MX</span>Mexico</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.com.mx/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- AU -->
+      <tr>
+        <td class="region"><span class="code">AU</span>Australia</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.com.au/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- IN -->
+      <tr>
+        <td class="region"><span class="code">IN</span>India</td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.in/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- PL -->
+      <tr>
+        <td class="region"><span class="code">PL</span>Polska</td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.pl/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- SE -->
+      <tr>
+        <td class="region"><span class="code">SE</span>Sweden</td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.se/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- BE -->
+      <tr>
+        <td class="region"><span class="code">BE</span>Belgium</td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.com.be/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+
+      <!-- IE -->
+      <tr>
+        <td class="region"><span class="code">IE</span>Ireland</td>
+        <td class="center"><span class="na">Not Available</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="center"><span class="check">●</span></td>
+        <td class="btn-cell"><a class="btn" href="https://www.amazon.ie/s?k=The+Ace+Sad+Lucifer" target="_blank" rel="noopener">Amazon →</a></td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          Availability: E-Book 13 regions · Paperback 14 regions · Hardcover 11 regions · Regions listed: 17
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <p class="note">
+    A solid <code>●</code> indicates the format is available in that region.
+    <code>Not Available</code> cells mark formats that are not published there.
+  </p>
+</div>
+</body>
+</html>
