@@ -131,30 +131,55 @@
     text-align: center;
   }
 
+  /* ---- underline-animation button (monochrome) ---- */
+
   .btn {
+    position: relative;
     display: inline-block;
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.08em;
     color: var(--ink);
-    background: transparent;
-    border: 1px solid var(--ink);
-    padding: 7px 14px;
+    background: none;
+    border: none;
+    padding: 4px 0;
     text-decoration: none;
     white-space: nowrap;
-    transition: background 0.15s ease, color 0.15s ease;
+    cursor: pointer;
   }
 
-  .btn:hover {
+  .btn::before,
+  .btn::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
     background: var(--ink);
-    color: var(--bg);
+    transition: 0.5s;
+  }
+
+  .btn::before {
+    margin-left: auto;
+  }
+
+  .btn:hover::before,
+  .btn:hover::after {
+    width: 100%;
+  }
+
+  .btn:focus-visible {
+    outline: 1px solid var(--ink);
+    outline-offset: 4px;
   }
 
   .btn.na {
-    border-color: var(--line);
     color: var(--na);
     pointer-events: none;
+  }
+  .btn.na::before,
+  .btn.na::after {
+    background: var(--na);
   }
 
   tbody tr:hover {
@@ -200,7 +225,7 @@
     tbody td.region .code { display: none; }
     tbody td.region { font-size: 12px; }
     thead th.btn-col { width: 90px; }
-    .btn { font-size: 10px; padding: 5px 8px; }
+    .btn { font-size: 10px; padding: 3px 0; }
     tbody td.center { font-size: 14px; }
   }
 </style>
@@ -410,6 +435,7 @@ P.S. : No Artificial Intelligence was used during the production of the story.</
     <a href="mailto:theblueindex@proton.me">theblueindex@proton.me</a> or
     <a href="mailto:adeline@tangentialgames.online">adeline@tangentialgames.online</a>
   </p>
+  <p>"Credits are always due" :  <a href="https://uiverse.io">uiverse.io</a> for the button UI</p>
 </div>
 </body>
 </html>
